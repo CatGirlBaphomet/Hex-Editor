@@ -262,17 +262,18 @@ namespace Hex_Editor
                                 }
                             }
 
-                            totalBytesRead += bytesRead;
-
                             // Update the RichEditBox contents and progress every 10,000 bits
                             if (bitsLoaded % 10000 == 0)
                             {
                                 BitsRichEditBox.Document.Selection.SetText(TextSetOptions.None, bitsWithSpaces.ToString());
+                                bitsWithSpaces.Clear();
 
                                 // Calculate and display progress as a percentage
                                 double progress = (double)totalBytesRead / totalFileSize * 100;
                                 StatusText.Text = $"Loading bits... {progress:F2}%";
                             }
+
+                            totalBytesRead += bytesRead;
                         } while (bytesRead > 0);
 
                         // Update any remaining bits
@@ -298,23 +299,30 @@ namespace Hex_Editor
         }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
         private void ApplyBitsButton_Click(object sender, RoutedEventArgs e)
         {
-            // Implement the Apply Bits functionality
+            // Retrieve the text from the BitsRichEditBox
+            string bitsText = BitsRichEditBox.Document.Selection.Text;
+
+            // Implement your logic to apply the bits here
+            // For now, let's display a message with the applied bits
+            string appliedBits = ApplyBitsLogic(bitsText); // Replace with your logic
+
+            // Display a message with the applied bits
+            StatusText.Text = "Applied Bits: " + appliedBits;
         }
+
+        // Example logic to apply bits (replace with your actual logic)
+        private string ApplyBitsLogic(string bits)
+        {
+            // You can process and manipulate the bits here
+            // For this example, we'll just return the original bits
+            return bits;
+        }
+
+
+
+
 
         private void LoadBytesButton_Click(object sender, RoutedEventArgs e)
         {
@@ -349,8 +357,49 @@ namespace Hex_Editor
         // Event handler for the FillCheckBox checkbox (if you want to handle its state change)
         private void FillCheckBox_Checked(object sender, RoutedEventArgs e)
         {
-            // Handle checkbox checked state
+            CheckBox fillCheckBox = (CheckBox)sender; // Cast the sender to a CheckBox
+
+            if (fillCheckBox.IsChecked == true)
+            {
+                // The "Fill" checkbox is checked, so enable the fill behavior
+
+                // Example: Implement fill behavior by filling the BitsRichEditBox with a pattern
+                string fillPattern = "FF "; // You can change this to your desired fill pattern
+                StringBuilder filledBits = new StringBuilder();
+
+                for (int i = 0; i < totalBitsToLoad; i++)
+                {
+                    filledBits.Append(fillPattern);
+
+                    // Add a new line every 16 bits for readability
+                    if ((i + 1) % 16 == 0)
+                    {
+                        filledBits.AppendLine();
+                    }
+                }
+
+                // Set the text in the BitsRichEditBox to the filled pattern
+                BitsRichEditBox.Document.SetText(TextSetOptions.None, filledBits.ToString());
+
+                // Update status text
+                StatusText.Text = "Fill enabled";
+
+                // Perform additional actions when fill is enabled
+            }
+            else
+            {
+                // The "Fill" checkbox is unchecked, so disable the fill behavior
+
+                // Clear the BitsRichEditBox text
+                BitsRichEditBox.Document.SetText(TextSetOptions.None, "");
+
+                // Update status text
+                StatusText.Text = "Fill disabled";
+
+                // Perform additional actions when fill is disabled
+            }
         }
+
 
         // Event handler for the CapsLockCheckBox checkbox (if you want to handle its state change)
         private void CapsLockCheckBox_Checked(object sender, RoutedEventArgs e)

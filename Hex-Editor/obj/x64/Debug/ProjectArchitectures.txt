@@ -1,1 +1,1 @@
-E:\Hex-Editor\Hex-Editor\Hex-Editor.csproj;x64
+C:\Users\beren\Desktop\Prive\Hex-Editor\Hex-Editor\Hex-Editor.csproj;x64

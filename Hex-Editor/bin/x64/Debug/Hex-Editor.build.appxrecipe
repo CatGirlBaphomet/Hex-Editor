@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>BAPHOMET</Machine>
+    <Machine>ICHIYO</Machine>
     <WindowsUser>beren</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
@@ -10,22 +10,22 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>687ebb59-0d9f-4b42-997e-a169abbd0830</PackageIdentityName>
     <PackageIdentityPublisher>CN=beren</PackageIdentityPublisher>
-    <IntermediateOutputPath>E:\Hex-Editor\Hex-Editor\obj\x64\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\beren\Desktop\Prive\Hex-Editor\Hex-Editor\obj\x64\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>E:\Hex-Editor\Hex-Editor\bin\x64\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\beren\Desktop\Prive\Hex-Editor\Hex-Editor\bin\x64\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="E:\Hex-Editor\Hex-Editor\bin\x64\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\beren\Desktop\Prive\Hex-Editor\Hex-Editor\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="E:\Hex-Editor\Hex-Editor\bin\x64\Debug\Hex-Editor.exe">
+    <AppxPackagedFile Include="C:\Users\beren\Desktop\Prive\Hex-Editor\Hex-Editor\bin\x64\Debug\Hex-Editor.exe">
       <PackagePath>entrypoint\Hex-Editor.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.14\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
@@ -34,52 +34,52 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Hex-Editor\Hex-Editor\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\beren\Desktop\Prive\Hex-Editor\Hex-Editor\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Hex-Editor\Hex-Editor\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\beren\Desktop\Prive\Hex-Editor\Hex-Editor\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Hex-Editor\Hex-Editor\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\beren\Desktop\Prive\Hex-Editor\Hex-Editor\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Hex-Editor\Hex-Editor\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\beren\Desktop\Prive\Hex-Editor\Hex-Editor\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Hex-Editor\Hex-Editor\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\beren\Desktop\Prive\Hex-Editor\Hex-Editor\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Hex-Editor\Hex-Editor\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\beren\Desktop\Prive\Hex-Editor\Hex-Editor\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Hex-Editor\Hex-Editor\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\beren\Desktop\Prive\Hex-Editor\Hex-Editor\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Hex-Editor\Hex-Editor\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\beren\Desktop\Prive\Hex-Editor\Hex-Editor\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Hex-Editor\Hex-Editor\bin\x64\Debug\Hex-Editor.xr.xml">
+    <AppxPackagedFile Include="C:\Users\beren\Desktop\Prive\Hex-Editor\Hex-Editor\bin\x64\Debug\Hex-Editor.xr.xml">
       <PackagePath>Hex-Editor.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Hex-Editor\Hex-Editor\bin\x64\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\beren\Desktop\Prive\Hex-Editor\Hex-Editor\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Hex-Editor\Hex-Editor\bin\x64\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\beren\Desktop\Prive\Hex-Editor\Hex-Editor\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Hex-Editor\Hex-Editor\bin\x64\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\beren\Desktop\Prive\Hex-Editor\Hex-Editor\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Hex-Editor\Hex-Editor\bin\x64\Debug\Core\Hex-Editor.exe">
+    <AppxPackagedFile Include="C:\Users\beren\Desktop\Prive\Hex-Editor\Hex-Editor\bin\x64\Debug\Core\Hex-Editor.exe">
       <PackagePath>Hex-Editor.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

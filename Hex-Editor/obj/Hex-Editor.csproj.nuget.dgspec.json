@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Hex-Editor\\Hex-Editor\\Hex-Editor.csproj": {}
+    "C:\\Users\\beren\\Desktop\\Prive\\Hex-Editor\\Hex-Editor\\Hex-Editor.csproj": {}
   },
   "projects": {
-    "E:\\Hex-Editor\\Hex-Editor\\Hex-Editor.csproj": {
+    "C:\\Users\\beren\\Desktop\\Prive\\Hex-Editor\\Hex-Editor\\Hex-Editor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Hex-Editor\\Hex-Editor\\Hex-Editor.csproj",
+        "projectUniqueName": "C:\\Users\\beren\\Desktop\\Prive\\Hex-Editor\\Hex-Editor\\Hex-Editor.csproj",
         "projectName": "Hex-Editor",
-        "projectPath": "E:\\Hex-Editor\\Hex-Editor\\Hex-Editor.csproj",
+        "projectPath": "C:\\Users\\beren\\Desktop\\Prive\\Hex-Editor\\Hex-Editor\\Hex-Editor.csproj",
         "packagesPath": "C:\\Users\\beren\\.nuget\\packages\\",
-        "outputPath": "E:\\Hex-Editor\\Hex-Editor\\obj\\",
+        "outputPath": "C:\\Users\\beren\\Desktop\\Prive\\Hex-Editor\\Hex-Editor\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
