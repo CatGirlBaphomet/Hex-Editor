@@ -8,37 +8,109 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="Gray">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
         <!-- App Title -->
         <TextBlock Text="Hex Editor" FontSize="24" Margin="12"/>
-        
-        <Border Grid.Row="1" VerticalAlignment="Center" Margin="12">
-            <TextBlock Name="FileLocationText" Text="" Margin="6"/>
-        </Border>
 
-        <!-- File Location and Actions -->
-        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="12">
-            <Button Content="Open" Click="OpenButton_Click" Margin="0,0,6,0"/>
-            <Button Content="Save" Click="SaveButton_Click" Margin="6,0,12,0"/>
-            <Button Content="Clear" Click="ClearButton_Click" Margin="6,0"/>
+        <!-- Grid for File Location Box and Buttons -->
+        <Grid Grid.Row="1" Margin="12">
+            <Grid.ColumnDefinitions>
+                <!-- Column for the gray box (wider) -->
+                <ColumnDefinition Width="700"/>
+
+                <!-- Column for buttons (takes the remaining space) -->
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
 
 
-        </StackPanel>
+            <!-- File Location Box (Gray Box) -->
+            <Border
+                Background="LightGray"
+                VerticalAlignment="Center"
+                PointerPressed="FileLocationBox_PointerPressed">
+                <TextBlock Name="FileLocationText" Text="" Margin="6"/>
+            </Border>
+
+            <!-- File Actions (Open and Save Buttons) -->
+            <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" Margin="12,0">
+                <Button Content="Open" Click="OpenButton_Click"/>
+                <Button Content="Save" Click="SaveButton_Click" Margin="6,0,6,0"/>
+                <Button Content="Clear" Click="ClearButton_Click"/>
+                <!-- Search TextBox -->
+                <TextBox Name="SearchTextBox" PlaceholderText="Search" Grid.Column="3" Margin="6,0" VerticalAlignment="Center" TextChanged="SearchTextBox_TextChanged" Width="200"/>
+                <Button Content="Next" Click="NextButton_Click" Grid.Column="4" Margin="6,0" VerticalAlignment="Center"/>
+                <Button Content="Previous" Click="PreviousButton_Click" Grid.Column="5" Margin="6,0" VerticalAlignment="Center"/>
+            </StackPanel>
+        </Grid>
 
         <!-- Hex View (You can replace this with a ListView or other controls) -->
-        <ListView Grid.Row="2" Name="HexView" Margin="12">
+        <ListView Grid.Row="2" Name="HexView" Margin="12" Visibility="Collapsed">
             <!-- Define your ListView columns here -->
         </ListView>
 
-        <!-- Status Bar -->
-        <TextBlock Grid.Row="3" Name="StatusText" Text="Ready" Margin="12"/>
-    </Grid>
+        <!-- Editor TextBox for Hex Editing -->
+        <RichEditBox Grid.Row="2" Name="BitsRichEditBox" Margin="12" TextWrapping="Wrap" AcceptsReturn="True" />
 
+
+        <!-- New Row of Buttons and Checkboxes -->
+        <Grid Grid.Row="3" Margin="12">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Load Bits Button -->
+            <Button Content="Load Bits" Click="LoadBitsButton_Click" Grid.Column="0" Margin="6,0"/>
+
+            <!-- Apply Bits Button -->
+            <Button Content="Apply Bits" Click="ApplyBitsButton_Click" Grid.Column="1" Margin="6,0"/>
+
+            <!-- Checkbox for "Fill" Option -->
+            <CheckBox Content="Fill" Name="FillCheckBox" Grid.Column="2" Margin="6,0"/>
+
+            <!-- Load Bytes Button -->
+            <Button Content="Load Bytes" Click="LoadBytesButton_Click" Grid.Column="3" Margin="0,0"/>
+
+            <!-- Apply Bytes Button -->
+            <Button Content="Apply Bytes" Click="ApplyBytesButton_Click" Grid.Column="4" Margin="12,0"/>
+
+            <!-- Load Hex Button -->
+            <Button Content="Load Hex" Click="LoadHexButton_Click" Grid.Column="5" Margin="0,0"/>
+
+            <!-- Apply Hex Button -->
+            <Button Content="Apply Hex" Click="ApplyHexButton_Click" Grid.Column="6" Margin="12,0"/>
+
+            <!-- Checkbox for "Fill" Option -->
+            <CheckBox Content="Fill" Name="FillCheckBox2" Grid.Column="7" Margin="0,0"/>
+
+            <!-- Checkbox for "Caps Lock" Option -->
+            <CheckBox Content="Caps" Name="CapsLockCheckBox" Grid.Column="8" Margin="6,0"/>
+
+            <!-- Load Text Button -->
+            <Button Content="Load Text" Click="LoadTextButton_Click" Grid.Column="9" Margin="100,0"/>
+
+            <!-- Apply Text Button -->
+            <Button Content="Apply Text" Click="ApplyTextButton_Click" Grid.Column="10" Margin="191,0"/>
+        </Grid>
+
+        <!-- Information Text -->
+        <!-- Status Bar -->
+        <TextBlock Grid.Row="4" Name="StatusText" Text="" Margin="12"/>
+        
+    </Grid>
 </Page>

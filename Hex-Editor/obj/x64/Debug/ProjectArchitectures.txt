@@ -1,0 +1,1 @@
+E:\Hex-Editor\Hex-Editor\Hex-Editor.csproj;x64
